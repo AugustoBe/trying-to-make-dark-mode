@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.2s linear;
+}
+
+body.dark{
+    background-color: #292c35
+}
+
+h1{
+    font-family: sans-serif;
+    display: flex;
+    position: fixed;
+    margin-bottom: 150px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h1.dark{
+    color: #fff;
+}
+
+.label{
+    width: 50px;
+    height: 26px;
+    background-color: #111;
+    justify-content: space-between;
+    position: relative;
+    padding: 5px;
+    display: flex;
+    border-radius: 50px;
+}
+
+.checkbox{
+    opacity: 0px;
+    position: absolute;
+}
+
+.ball {
+    background-color: #fff;
+    position: absolute;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball{
+    transform: translateX(24px);
+}
+
+.fa-moon{
+    color: #f1c40f;
+}
+
+.fa-sun{
+    color: #f39c12
+}
